@@ -1,20 +1,29 @@
-Create your first c++ project in unreal engine
+# Create your first c++ project in unreal engine
 
 ## Introduction
 
-A quest system can be one of the main features of a game, especially for a narrative one. In order to understand the concepts explained in this article, it is recommended to have a basic knowledge of C++ and to know your way around the Unreal Engine editor. 
+In order to easily understand the concepts explained in this article, it is recommended to have a basic understanding of C++ and to know your way around the Unreal Engine editor. 
 
-On the internet, you will most often come across blueprint tutorials, so i will explain how i created my system purely based on C++ and what mistakes to avoid doing.
+A quest system can be one of the main features of a game, especially for a narrative one. My aim was to create a system similar to the one in The Witcher 3, one of my favourite games of all time. 
+
+On the internet, you will most often come across blueprint tutorials, so i will explain how i created my project purely based on C++ and what mistakes to avoid doing.
+
+## My initial plan 
+- Triggers: Establishing the onset of quests
+- Quest Creation Method: Enabling developer to create a new quest without doing any C++ work
+- Quest Display: Utilizing a user widget class for on-screen quest visualization
+- Quest Tracking: Updating players on their quest progress
+- Optimization and Profiling: An area I aim to explore further
 
 ## Creating your project
 
-I decided to use the first person template provided by the engine so that i wouldn't have to worry about implementing features that aren't related to a quest system. I knew that I was going to add a kill type of quest and the third person template doesn't have a gun already implemented. Also, don't forget to choose C++ as project default.
+I decided to use the first person template provided by the engine to bypass implementing unreleated features to the quest system. This choice was strategic, considering my intent to incorporate a 'kill' quest, a gun and projectile being absent in the third-person template. Remember to default to C++ in your project settings.
 
 ![alt text](projectcreate.png)
 
 ## Creating the data table
 
-I used a data table to store the details for my quests and objectives. I started by creating a structure that derives from FTableRowBase in a class of my choosing: `struct FQuestDetails : public FTableRowBase` This is a very crucial aspect that allows you to create a data table from that specific structure. There, i added variables for the quest name, description but also for the objectives with can be of different types such as (interact, location, kill or collect). After compiling the code, you can create the data table by right clicking on the content browser, going to miscellanouse and choosing the quest details struct.
+I used a data table to store the details for my quests and objectives. I started by creating a structure that derives from FTableRowBase in a class of my choosing: `struct FQuestDetails : public FTableRowBase` This is a very crucial aspect that allows the creation of a data table from that specific structure. There, i added variables for the quest name, description but also for the objectives with can be of different types such as (interact, location, kill or collect). After compiling the code, you can create the data table by right clicking on the content browser, going to miscellanouse and choosing the quest details struct.
 
 ![alt text](datatable.png)
 
@@ -231,8 +240,16 @@ void UInventoryComponent::AddToInventory(FName Item, int32 Quantity)
 	}
 }
 ```
+
+## The final picture
 ![alt text](show1.png)
 ![alt text](show2.png)
 ![alt text](show3.png)
 
-I used this [tutorial](https://www.youtube.com/playlist?list=PL4G2bSPE_8unYoX6G_UUE5QIzbySCUR_8) as a reference which was made in blueprint
+I used this [tutorial](https://www.youtube.com/playlist?list=PL4G2bSPE_8unYoX6G_UUE5QIzbySCUR_8) as a reference which was made in blueprint.
+
+[Unreal Engine forums](https://forums.unrealengine.com/categories?tag=unreal-engine) is another website I used frequently to ask questions.
+
+Whenever i was unsure about a function's implementation, I would search it in the [Unreal Engine documentation](https://docs.unrealengine.com/5.3/en-US/).
+
+![alt text](buas.png)
