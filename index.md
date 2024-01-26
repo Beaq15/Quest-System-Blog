@@ -231,9 +231,8 @@ void UInventoryComponent::AddToInventory(FName Item, int32 Quantity)
 	}
 }
 ```
-
-Walkthrough the quest system
-<img src = "playthrough.gif"></img>
--
+![alt text](show1.png)
+![alt text](show2.png)
+![alt text](show3.png)
 
 I used this [tutorial](https://www.youtube.com/playlist?list=PL4G2bSPE_8unYoX6G_UUE5QIzbySCUR_8) as a reference which was made in blueprint
