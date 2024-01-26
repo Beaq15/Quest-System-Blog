@@ -1,5 +1,3 @@
-# Create your first c++ project in unreal engine
-
 ## Introduction
 
 In order to easily understand the concepts explained in this article, it is recommended to have a basic understanding of C++ and to know your way around the Unreal Engine editor. 
@@ -9,11 +7,11 @@ A quest system can be one of the main features of a game, especially for a narra
 On the internet, you will most often come across blueprint tutorials, so i will explain how i created my project purely based on C++ and what mistakes to avoid doing.
 
 ## My initial plan 
-- Triggers: Establishing the onset of quests
-- Quest Creation Method: Enabling developer to create a new quest without doing any C++ work
-- Quest Display: Utilizing a user widget class for on-screen quest visualization
-- Quest Tracking: Updating players on their quest progress
-- Optimization and Profiling: An area I aim to explore further
+- **Triggers:** Establishing the onset of quests
+- **Quest Creation Method:** Enabling developer to create a new quest without doing any C++ work
+- **Quest Display:** Utilizing a user widget class for on-screen quest visualization
+- **Quest Tracking:** Updating players on their quest progress
+- **Optimization and Profiling:** An area I aim to explore further
 
 ## Creating your project
 
